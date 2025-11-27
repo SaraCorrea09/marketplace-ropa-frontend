@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="container-fluid">
         <Link className="navbar-brand fw-bold d-flex align-items-center" to="/">
           <i className="bi bi-shop text-warning me-2" style={{ fontSize: '1.5rem' }}></i>
-          <span className="text-gradient">GoBuy</span>
+          <span className="text-gradient">Marketplace Ropa</span>
         </Link>
         
         <button 
@@ -57,21 +57,34 @@ const Navbar = () => {
                   </Link>
                 </li>
                 
-                <li className="nav-item ms-lg-3">
-                  <span className="navbar-text text-light me-3 d-none d-lg-inline">
-                    <i className="bi bi-person-circle me-2"></i>
-                    {user.full_name}
-                  </span>
-                </li>
-                
-                <li className="nav-item">
-                  <button 
-                    onClick={handleLogout}
-                    className="btn btn-outline-light btn-sm"
+                <li className="nav-item dropdown ms-lg-3">
+                  <a 
+                    className="nav-link dropdown-toggle" 
+                    href="#" 
+                    role="button" 
+                    data-bs-toggle="dropdown"
                   >
-                    <i className="bi bi-box-arrow-right me-1"></i>
-                    Salir
-                  </button>
+                    <i className="bi bi-person-circle me-1"></i>
+                    {user.full_name}
+                  </a>
+                  <ul className="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <Link className="dropdown-item" to="/profile">
+                        <i className="bi bi-person-badge me-2"></i>
+                        Mi Perfil
+                      </Link>
+                    </li>
+                    <li><hr className="dropdown-divider" /></li>
+                    <li>
+                      <button 
+                        onClick={handleLogout}
+                        className="dropdown-item text-danger"
+                      >
+                        <i className="bi bi-box-arrow-right me-2"></i>
+                        Cerrar Sesión
+                      </button>
+                    </li>
+                  </ul>
                 </li>
               </>
             ) : (

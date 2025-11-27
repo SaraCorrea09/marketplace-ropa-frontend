@@ -1,3 +1,6 @@
+// ============================================
+// src/context/AuthContext.jsx (ACTUALIZADO)
+// ============================================
 import { createContext, useState, useEffect } from 'react';
 import api from '../services/api';
 
@@ -45,8 +48,13 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
+  // NUEVA FUNCIÓN: Actualizar datos del usuario
+  const updateUser = (userData) => {
+    setUser(userData);
+  };
+
   return (
-    <AuthContext.Provider value={{ user, login, register, logout, loading }}>
+    <AuthContext.Provider value={{ user, setUser: updateUser, login, register, logout, loading }}>
       {children}
     </AuthContext.Provider>
   );

@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -13,10 +13,11 @@ import MyPurchases from './pages/MyPurchases';
 import MySales from './pages/MySales';
 import CreateProduct from './pages/CreateProduct';
 import EditProduct from './pages/EditProduct';
+import Profile from './pages/Profile';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <AuthProvider>
         <Navbar />
         <Routes>
@@ -25,7 +26,16 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetail />} />
-          <Route path="products/create" element={<CreateProduct />} />
+          <Route path="/products/create" element={<CreateProduct />} />
+
+          <Route 
+            path="/profile" 
+            element={
+              
+                <Profile />
+    
+            } 
+          />
 
           <Route 
             path="/my-products" 
@@ -75,7 +85,7 @@ function App() {
           />
         </Routes>
       </AuthProvider>
-    </BrowserRouter>
+    </Router>
   );
 }
 
