@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/marketplace-ropa-frontend/static/css/main.829b5507.css",
-    "main.js": "/marketplace-ropa-frontend/static/js/main.812fb37e.js",
+    "main.js": "/marketplace-ropa-frontend/static/js/main.9fe3f070.js",
     "static/js/453.cd168bb7.chunk.js": "/marketplace-ropa-frontend/static/js/453.cd168bb7.chunk.js",
     "index.html": "/marketplace-ropa-frontend/index.html",
     "main.829b5507.css.map": "/marketplace-ropa-frontend/static/css/main.829b5507.css.map",
-    "main.812fb37e.js.map": "/marketplace-ropa-frontend/static/js/main.812fb37e.js.map",
+    "main.9fe3f070.js.map": "/marketplace-ropa-frontend/static/js/main.9fe3f070.js.map",
     "453.cd168bb7.chunk.js.map": "/marketplace-ropa-frontend/static/js/453.cd168bb7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.829b5507.css",
-    "static/js/main.812fb37e.js"
+    "static/js/main.9fe3f070.js"
   ]
 }
